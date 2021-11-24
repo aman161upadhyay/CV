@@ -1,0 +1,274 @@
+\documentclass{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{tabularx}
+\usepackage{setspace} 
+
+
+\usepackage{amssymb}
+\usepackage{mathabx}
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, nolistsep}
+\setlength\lineskip{2.4pt}
+\renewcommand\baselinestretch{0}
+\setlength\parindent{2.4pt}
+\setlength\intextsep{2.4pt}
+
+
+
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+%  ididit    \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+%\titlespacing{\section}{0pt}{3pt}{3pt}
+% ididit  \titlespacing*{\section}{0mm}{1.75mm}{0mm}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+%   ididit   \hyphenation{im-pre-se}
+
+%SHIKHERS
+
+\usepackage{wrapfig}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\pagenumbering{gobble}
+\titlespacing*{\section}{0mm}{1.75mm}{0mm}
+
+
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+\usepackage{geometry}
+\geometry{a4paper, portrait, margin=1.5cm}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge AMAN UPADHYAY \textsc{}
+	}\lineskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+
+
+\begin{center}
+
+     {\small Assistant Manager, \href{https://www.linkedin.com/company/american-express/}{American Express} | \href{https://www.linkedin.com/company/accertify-inc-/}{Accertify}} \\
+    
+     {\small \href{https://www.linkedin.com/in/amanupadhyay/}{LinkedIn} |  \href{mailto:aman.upadhyay@pm.me}{aman.upadhyay@pm.me} | \href{mailto:aman161upadhyay@gmail.com}{aman161upadhyay@gmail.com} | \href{tel:+917755057605}{+917755057605} }
+
+\end{center}
+
+
+\section*{ \begin{flushleft} Work Experience \end{flushleft} }
+
+\vspace{-4mm}
+
+\begin{itemize}
+
+\item 
+       \textbf{Fraud Risk Decision Scientist, American Express }    \hfill\textit{July 2019 - Present}
+       \\[2pt]
+     \textbf{User Behavior Analytical (UBA) AI Product}
+    \begin{itemize}
+        \item Built and deployed 2 Generations of UBA model across Accertify clients \& industries which involved real-time analysis of \textbf{Big Data} streams (\textbf{0.5 billion daily event rows}) of user activity on AWS/MapR servers using \textbf{Apache Spark (Pyspark)/Python} for feature engineering, ML modeling and analytics
+        \item Built over 300 attributes tracking the subconscious behavior to discern legitimate users vs fraudsters
+        \item Devised intelligent AI systems to detect \textbf{fraudulent} users, \textbf{Account Take-Over} events, \textbf{bots'} activity, and myriad of fraud attacks on client webpages
+        \item Gen 2 is actively decisioning on \textbf{12+ major global clients}, providing annual savings of over \textbf{USD 15 MM}
+\end{itemize}
+
+\vspace{1.5mm}
+     \textbf{Fraud Detection AI Products}
+    \begin{itemize}
+     \vspace{0.7mm}
+        \item Implemented 5 industry and custom clients-specific fraud \textbf{risk ML} models for 30+ \textbf{Fortune 500 clients} spread across North America, EMEA and Asia Pacific, achieving fraud savings of over \textbf{USD 20 MM} annually
+
+        \item Led, mentored, and trained analysts, managers and partners across India, the UK, and the US on newly deployed \textbf{MapR infrastructure} and built systems for enabling ML business-as-usual workflows
+
+        \item Led the development of \textbf{100+ PySpark tools/systems} and \textbf{Deep Learning R\&D} for building AI models and strategies for business problems in e-commerce risk management
+
+
+\end{itemize}
+
+\end{itemize}
+
+\begin{itemize}
+
+
+\item 
+       % \textbf{Enhancing Supply Chain Metric by Increasing Fill Rate and Decreasing Rejection Rate}   
+       \textbf{Business Analyst, Supply Chain Operations, \href{https://www.linkedin.com/company/pharmeasy/}{PharmEasy}}
+       \hfill\textit{May - Jul 2018}
+       \\[0pt]
+     
+
+ 
+    \begin{itemize}
+        \item Comprehensive analysis of medicine sales and customers' granular data research from AWS RedShift Database using PostgreSQL and Python
+        \item Strategized a profit maximizing inventory management algorithm for courier warehouses
+        \item Produced actionable conclusive data to prioritize medicines to be procured for inventory
+        \vspace{-1mm}
+    \end{itemize}
+
+
+
+\end{itemize}
+
+%Section: Education
+\section*{Educational/Scholastic Qualifications}
+% Please add the following required packages to your document preamble:
+% 
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+
+
+\centering
+\begin{tabular}{rl}	
+
+
+
+ IIT Kanpur (Dual Degree) & M.Tech. in \textsc{Biological Sciences and Bioengineering}
+\normalsize \textbf{CGPA: 10.0/10.0} \\&\\ 
+
+& B.S. in \textsc{Chemistry} | \normalsize \textbf{CGPA: 8.7/10.0} \\
+
+
+
+\vspace{-1.5mm}
+
+\end{tabular}
+
+
+\begin{itemize}
+    \item \href{https://www.cfainstitute.org/}{\textbf{CFA}} Level 1 Candidate
+    \vspace{0.5mm}
+    \item Awarded \textbf{Academic Excellence Award} twice: \textbf{(S.P.I) 10/10} in 5 semesters among 1100+ students
+    \item Received \textbf{A*} for exceptional performance in multiple courses
+
+\end{itemize}
+
+
+\section*{ \begin{flushleft} Selected Projects \end{flushleft} }
+
+\vspace{-5mm}
+
+
+
+\begin{itemize}
+
+\item \textbf{\href{https://www.youtube.com/watch?v=jvNga9Yr2Rw}{VisionX} - Intelligent Traffic Control System AI product}
+     \hfill\textit{Sep 2018 - May 2019}
+     
+     \vspace{-1.4mm}
+     
+     \\[3pt] \textbf{All India Winner - Funded by LaTrobe University, Melbourne}  \\
+
+     \begin{itemize}
+      
+         \item Innovated and developed an end-to-end CNN based AI solution which tracked vehicular density using CCTVs and intelligently modulated traffic lights to improve existing traffic congestion problems
+         
+
+     \end{itemize}
+
+\vspace{1mm}
+
+\item \textbf{\href{https://github.com/aman161upadhyay/sacredgamers_codefundoMS} {Prediction of natural disasters and calamities by sentiment analysis}}
+     \hfill\textit{Sep - Oct 2018}
+     
+     \vspace{-1.4mm}
+     
+     \\[3pt] \textbf{Microsoft CodeFunDo++ 2018 Hackathon - 1st Runner-Up among 79 teams}  \\
+
+     \begin{itemize}
+      
+         \item Hosted a web-application on \textbf{MS Azure} (developed using \textbf{Flask}) based on a back-end \textbf{tweet crawler}
+         \item Applied keywords-phrases extraction and \textbf{sentiment analysis ML APIs} to predict impending disasters
+
+     \end{itemize}
+     
+\vspace{1mm}
+
+\item \href{https://github.com/aman161upadhyay/Project-SHY}{\textbf{Discovering Novel Noncovalent Interactions in Biomolecules}}: \textit{\textbf{Thesis Published} }
+     \hfill\textit{Jul 2017 - Jun 2020}
+     \\[0pt]  \textit{\small Prof. R. Sankararamakrishnan, Dept. of Biological Sciences and Bioengineering, IIT Kanpur}  
+    \begin{itemize}
+    \vspace{0.7mm}
+        \item Exhaustive statistical hypothesis experiments to confirm the existence of selenium hydrogen bonds
+        \item Data analytics on massive biomolecular databases, Quantum Mechanical calculations, and deployed BioInformatics algorithms using State-of-the-Art Super Computers
+        
+
+    \end{itemize}
+
+
+
+
+\end{itemize}
+\section*{\begin{flushleft} Technical skills \end{flushleft}  }
+\begin{itemize}
+    
+    \vspace{-4mm}
+    
+    \item Proficiency : Python | PySpark | MapR - Hadoop | AWS | EMR | MS Excel | SQL | SAS | Bash
+     \item Work/Project Experience: LATEX | R | MATLAB | C/C++ | FORTRAN 
+\end{itemize}
+
+\vspace{-1mm}
+
+
+\begin{itemize}
+          \item[$\smalltriangleup$] An Immensely Curious and Avid Learner: Have read over 200 books and completed dozens of courses and certifications - \href{https://www.goodreads.com/iaman}{GoodReads}
+\end{itemize}
+
+\end{document}
